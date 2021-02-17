@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /errors/
+Disallow: /index.php/
+User-agent: rogerbot
+Disallow:/
+User-agent: mj12bot
+Disallow:/
+User-agent: dotbot
+Disallow:/
+User-agent: exabot
+Disallow:/
+User-agent: gigabot
+Disallow:/
+User-agent: AhrefsBot
+Disallow: /
+User-agent: BacklinkCrawler
+Disallow: /
+Sitemap: enter-your-sitemap.gz

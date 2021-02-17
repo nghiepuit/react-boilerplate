@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <!-- measurements -->
+  ////%////
+  <!-- end measurements -->
+  <!-- preload -->
+  ////%////
+  <!-- end preload -->
+  <link rel="dns-prefetch" href="https://media3.scdn.vn" />
+  <link rel="dns-prefetch" href="https://api.fundoo.me" />
+  <base href="/" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="content-language" content="vi" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  
+  <link rel="manifest" href="{{PUBLIC_URL}}/static/manifest.{{COMMIT_HASH}}.json" />
+  <link rel="shortcut icon" href="{{PUBLIC_URL}}/static/favicon.ico" />
+  <link rel="icon" href="{{PUBLIC_URL}}/static/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{PUBLIC_URL}}/static/favicon.ico" type="image/vnd.microsoft.icon" />
+
+  <!-- CSS -->
+  ////%////
+  <!-- <style>.font-loading{font-family: Arial, Helvetica, sans-serif;}</style> -->
+  <!-- end CSS -->
+
+  <!-- helmet -->
+  ////%////
+  <!-- end helmet -->
+</head>
+
+<body>
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-KS6S8W"
+      height="0"
+      width="0"
+      style="display:none;visibility:hidden">
+    </iframe>
+    <div>Bạn cần bật Javascript để sử dụng trang web fundoo.me</div>
+  </noscript>
+  <div id="fb-root"></div>
+  <div id="root">
+    <!-- SSR -->
+    ////%////
+    <!-- end SSR -->
+  </div>
+  <div id="portal"></div>
+
+  <!-- runtime -->
+  ////%////
+  <!-- end runtime -->
+
+  <!-- js -->
+  ////%////
+  <!-- end js -->
+
+  <!-- debug -->
+  ////%////
+  <!-- end debug -->
+</body>
+
+</html>

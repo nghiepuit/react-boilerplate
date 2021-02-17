@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <base href="/" />
+    <meta charset="{{ APP_CHARSET }}" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"
+    />
+
+    <link
+      rel="manifest"
+      href="{{ PUBLIC_URL }}/static/manifest.{{ COMMIT_HASH }}.json"
+    />
+    <link rel="shortcut icon" href="{{ PUBLIC_URL }}/static/favicon.ico" />
+    <link
+      rel="icon"
+      href="{{ PUBLIC_URL }}/static/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ PUBLIC_URL }}/static/favicon.ico"
+      type="image/vnd.microsoft.icon"
+    />
+  </head>
+
+  <body>
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KS6S8W"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden">
+      </iframe>
+      <div>Bạn cần bật Javascript để sử dụng trang web fundoo.me</div>
+    </noscript>
+    <div id="fb-root"></div>
+    <div id="root"></div>
+    <script>window.__FIRST_LOAD__ = true;</script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <base href="/" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="content-language" content="vi" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <link rel="shortcut icon" href="{{PUBLIC_URL}}/static/favicon.ico" />
+  <link rel="icon" href="{{PUBLIC_URL}}/static/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{PUBLIC_URL}}/static/favicon.ico" type="image/vnd.microsoft.icon" />
+  <style>
+    @font-face {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      src: local(Roboto),
+      local(Roboto-Regular),
+      url({{PUBLIC_URL}}/static/fonts/Roboto/Roboto-Regular-Vietnamese.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+    }
+
+    @font-face {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      src: local(Roboto),
+      local(Roboto-Regular),
+      url({{PUBLIC_URL}}/static/fonts/Roboto/Roboto-Regular-Latin_ext.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+        U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+      src: local(Roboto),
+      local(Roboto-Regular),
+      url({{PUBLIC_URL}}/static/fonts/Roboto/Roboto-Regular-Latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+        U+FEFF, U+FFFD;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'),
+      local(Roboto-Medium),
+      url({{PUBLIC_URL}}/static/fonts/Roboto/Roboto-Medium-Vietnamese.woff2) format('woff2');
+      unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'),
+      local(Roboto-Medium),
+      url({{PUBLIC_URL}}/static/fonts/Roboto/Roboto-Medium-Latin_ext.woff2) format('woff2');
+      unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+        U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 500;
+      src: local('Roboto Medium'),
+      local(Roboto-Medium),
+      url({{PUBLIC_URL}}/static/fonts/Roboto/Roboto-Medium-Latin.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+        U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+        U+FEFF, U+FFFD;
+      font-display: swap;
+    }
+
+    @keyframes sd-rotate-360-animation {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes timeline {
+      0% {
+        background-position: -468px 0;
+      }
+
+      100% {
+        background-position: 468px 0;
+      }
+    }
+
+    @keyframes sd-rotate-360-animation {
+      0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes timeline {
+      0% {
+        background-position: -468px 0;
+      }
+
+      100% {
+        background-position: 468px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <div>Bạn cần bật Javascript để sử dụng trang web fundoo.me</div>
+  </noscript>
+  <div id="fb-root"></div>
+  <div id="root"></div>
+  <script>
+    window.__FIRST_LOAD__ = true;
+  </script>
+</body>
+
+</html>

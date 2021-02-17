@@ -1,0 +1,25 @@
+{
+  "manifest": [
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/android-chrome-36x36.png"
+    },
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/android-chrome-48x48.png"
+    },
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/android-chrome-72x72.png"
+    },
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/android-chrome-96x96.png"
+    },
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/android-chrome-144x144.png"
+    },
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/android-chrome-192x192.png"
+    },
+    {
+      "url": "{{PUBLIC_URL}}/static/icons/icon-large-512x512.png"
+    }
+  ]
+}
