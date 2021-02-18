@@ -1,4 +1,4 @@
-import createMemoryHistory from 'history/createMemoryHistory';
+import { createMemoryHistory } from 'history';
 import checkIsRobot from 'isbot';
 import _get from 'lodash-es/get';
 import _transform from 'lodash-es/transform';
@@ -17,7 +17,7 @@ import {
   actions,
   DataProvider,
   DATA_STATUS,
-  handleFetchRequest
+  handleFetchRequest,
 } from './../../redux';
 import configureStore from './../../redux/configureStore';
 import { matchRoute } from './../../setup/ssr/utils';

@@ -121,19 +121,19 @@ class Metadata extends Component {
         */}
         <link
           rel="apple-touch-icon"
-          href={buildStaticUrl('/static/icons/apple-touch-icon-152x152.png')}
+          href={buildStaticUrl('/static/icons/apple-touch-icon-152x152.svg')}
         />
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={buildStaticUrl(
-            '/static/icons/touch-icon-iphone-retina-180x180.png',
+            '/static/icons/touch-icon-iphone-retina-180x180.svg',
           )}
         />
         {/* Specifying a Launch Screen Image */}
         <link
           rel="apple-touch-startup-image"
-          href={buildStaticUrl('/static/icons/icon-large-512x512.png')}
+          href={buildStaticUrl('/static/icons/icon-large-512x512.svg')}
         />
         {/* Adding a Launch Icon Title */}
         <meta name="apple-mobile-web-app-title" content="fundoo.me" />

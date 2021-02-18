@@ -27,10 +27,12 @@ const assetJsonString = fs
   )
   .toString()
   .replace(publicURLReg, '');
+
 const webpackStatsJsonString = fs
   .readFileSync(path.resolve(process.cwd(), 'build/frontend/stats.json'))
   .toString()
   .replace(publicURLReg, '');
+
 const assetManifest = JSON.parse(assetJsonString);
 const webpackStats = JSON.parse(webpackStatsJsonString);
 const mainEntry = webpackStats.entrypoints.main.assets || [];
@@ -87,13 +89,11 @@ export default function useReactSSR(app, config) {
   const vendorsCSS = mainEntry
     .filter(isCSS)
     .map((css) => config.publicUrl + ensurePrefix(css, '/'));
-  // .map(css => readAssetFile(ensurePrefix(css, '/')))
-  // .join('\n');
+
   const appCSS = appEntry
     .filter(isCSS)
     .map((css) => config.publicUrl + ensurePrefix(css, '/'));
-  // .map(css => readAssetFile(ensurePrefix(css, '/')))
-  // .join('\n');
+
   const runtimeJS = readAssetFile(assetManifest['runtime.js']);
   const fontFace = readAssetFile(`/fontface.${__COMMIT_HASH__}.sd`);
   const mainJS = mainEntry.filter(isJS).map((js) => ({

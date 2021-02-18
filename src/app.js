@@ -45,7 +45,6 @@ async function start() {
   await client.afterRender((client) => {
     // TODO: setup sentry and sw here
   });
-
   await client.init();
   await client.render();
 }

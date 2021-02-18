@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "yarn dev:web",
     "build:sw/wap": "NODE_OPTIONS=--max-old-space-size=10240 react-sdk --platform=wap --target=service-worker --mode=production",
     "build:node/wap": "NODE_OPTIONS=--max-old-space-size=10240 react-sdk --platform=wap --target=node --mode=production",
     "build:browser/wap": "NODE_OPTIONS=--max-old-space-size=10240 react-sdk --platform=wap --target=web --mode=production",
@@ -12,7 +13,6 @@
     "build:browser/web": "NODE_OPTIONS=--max-old-space-size=10240 react-sdk --platform=web --target=web --mode=production",
     "build:web": "yarn build:sw/web && yarn build:browser/web && yarn build:node/web",
     "build:wap": "yarn build:sw/wap && yarn build:browser/wap && yarn build:node/wap",
-    "dev": "yarn dev:web",
     "dev:web": "NODE_OPTIONS=--max-old-space-size=10240 react-sdk --platform=web --target=web --mode=development",
     "dev:wap": "NODE_OPTIONS=--max-old-space-size=10240 react-sdk --platform=wap --target=web --mode=development",
     "start": "node --no-deprecation build/backend/server.js",
