@@ -6,22 +6,21 @@ import qs from 'query-string';
 import React from 'react';
 import { renderToNodeStream, renderToString } from 'react-dom/server';
 import { Helmet } from 'react-helmet';
+import { Provider as StoreProvider } from 'react-redux';
 import { compose } from 'recompose';
+import serializeJavascript from 'serialize-javascript';
+import { checkRequestIsInApp } from '../../helpers/checkRequestIsInApp';
+import normalizeUrl from '../../helpers/url/normalizeUrl';
 import AppContext from './../../context/AppContext';
 import { withGlobalDataProvider } from './../../hocs/withGlobalData';
-import configureStore, {
-  StoreProvider,
-} from './../../redux/configureStore';
-import { matchRoute } from './../../setup/ssr/utils';
-import serializeJavascript from 'serialize-javascript';
-import { checkRequestIsInApp } from '../helpers/checkRequestIsInApp';
-import normalizeUrl from '../helpers/url/normalizeUrl';
 import {
   actions,
   DataProvider,
   DATA_STATUS,
-  handleFetchRequest,
+  handleFetchRequest
 } from './../../redux';
+import configureStore from './../../redux/configureStore';
+import { matchRoute } from './../../setup/ssr/utils';
 import { ensurePrefix } from './ensurePrefix';
 import getBaseUrl from './getBaseUrl';
 import HtmlStreamBuilder from './HtmlStreamBuilder';
