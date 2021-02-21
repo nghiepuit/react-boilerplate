@@ -1,5 +1,3 @@
-import { Loadable } from '@topenland/ui';
-
 <!-- Condition: [innerRef] is required from react-waypoint -->
 const LoadingComponent = ({ innerRef }) => {
   return (

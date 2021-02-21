@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["./src/*"],
+      "*": ["./node_modules/*", "../../node_modules/*", "../*"]
+    },
+    "jsx": "react",
+    "strict": true
+  }
+}

@@ -1,12 +1,10 @@
-import { useContext } from 'react';
-import _get from 'lodash-es/get';
-import _pickBy from 'lodash-es/pickBy';
 import _flatten from 'lodash-es/flatten';
+import _get from 'lodash-es/get';
 import _identity from 'lodash-es/identity';
-import _map from 'lodash-es/map';
-
-import { DataSource, GetterResult } from './type';
+import _pickBy from 'lodash-es/pickBy';
+import { useContext } from 'react';
 import DataProviderContext from './Context';
+import { DataSource, GetterResult } from './type';
 import updateStore from './updateStore';
 
 function getCookies(_data: any) {
@@ -18,7 +16,8 @@ function getCookies(_data: any) {
     data = [_data];
   }
 
-  return _flatten(data.map(f => _get(f, ['meta', 'cookie'])).filter(Boolean));
+  const mapped = data.map((f) => _get(f, ['meta', 'cookie'])).filter(Boolean);
+  return _flatten(mapped);
 }
 
 export default function createFetcher<T, P, DT>(config: DataSource<T, P, DT>) {
@@ -60,7 +59,7 @@ export default function createFetcher<T, P, DT>(config: DataSource<T, P, DT>) {
                 );
             }
           },
-          res => {
+          (res) => {
             try {
               const data = action.onResponse(
                 res.body,
@@ -79,7 +78,7 @@ export default function createFetcher<T, P, DT>(config: DataSource<T, P, DT>) {
 
               const cookies: any[] = getCookies(data);
               if (cookie) {
-                cookies.map(setCookie => {
+                cookies.map((setCookie) => {
                   cookie.set(
                     setCookie.key,
                     setCookie.value,
@@ -102,6 +101,7 @@ export default function createFetcher<T, P, DT>(config: DataSource<T, P, DT>) {
                   );
                 });
             } catch (error) {
+              console.log(error);
               if (!!action.onError) {
                 context.dispatch(
                   updateStore(
@@ -121,7 +121,7 @@ export default function createFetcher<T, P, DT>(config: DataSource<T, P, DT>) {
               }
             }
           },
-          error => {
+          (error) => {
             if (!!config.onError) {
               const data = action.onError(
                 error,

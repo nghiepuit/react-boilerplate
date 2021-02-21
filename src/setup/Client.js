@@ -76,6 +76,7 @@ export default class Client {
       isInApp: checkIsInApp(),
     };
 
+    const MetaComp = this.config.metaRender;
     const tree = (
       <AppContext.Provider value={appContext}>
         <DataProvider
@@ -86,7 +87,7 @@ export default class Client {
           <Provider store={store}>
             <Fragment>
               <Layout routes={routes} history={history} />
-              {/* {this.config.metaRender && <this.config.metaRender />} */}
+              {MetaComp && <MetaComp />}
             </Fragment>
           </Provider>
         </DataProvider>

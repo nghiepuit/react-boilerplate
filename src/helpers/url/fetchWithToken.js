@@ -8,12 +8,6 @@ export default (url, options = {}) => {
   if (!jwt || jwt === 'undefined' || jwt === 'null') {
     jwt = '';
   }
-  /**
-   |----------------------------------------------------------------
-   | Bo sung 'x-requested-with': 'XMLHttpRequest' de work voi ham
-   | /general/login/getSession/
-   |----------------------------------------------------------------
-   */
   options = _defaultsDeep(
     {
       headers: {

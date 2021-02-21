@@ -11,5 +11,17 @@ function modifyProxyRes(proxyRes, req) {
 }
 
 module.exports = () => {
-  return {};
+  return {
+    [`^/uaa/`]: {
+      target: process.env.APP_FUNDOO_API_DOMAIN,
+      changeOrigin: true,
+      pathRewrite: {
+        [`^/uaa/`]: '/',
+      },
+      onProxyRes: (proxyRes, req, res) => {
+        modifyProxyRes(proxyRes, req);
+      },
+      logLevel: 'silent',
+    },
+  };
 };

@@ -74,15 +74,6 @@ class Root extends PureComponent {
       return false;
     }
 
-    // Redirect Home page when at page search and q not exist
-    if (
-      searchRoutes[nextRouteName] &&
-      this.isInvalidQuery(nextQuery, nextParams)
-    ) {
-      document.location.replace('/');
-      return false;
-    }
-
     return true;
   };
 

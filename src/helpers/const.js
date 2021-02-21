@@ -40,6 +40,7 @@ export const BROWSER_IE = 'ie';
 export const BROWSER_EDGE = 'edge';
 export const LOGIN_TYPE_COOKIE_NAME = 'login_type';
 export const LOGIN_ID_COOKIE_NAME = 'login_id';
+export const LOGIN_TYPE_USERNAME = 'username';
 export const LOGIN_TYPE_FACEBOOK = 'fb';
 export const LOGIN_TYPE_GOOGLE = 'gg';
 export const FULLNAME_MINLENGTH = 2;
@@ -60,3 +61,6 @@ export const ICON_IS_EVENT =
 
 export const API_GET_VERSION = '/__version__';
 export const HAVE_UPDATE_MESSAGE_TYPE = 'IS_HAVE_VERSION_UPDATE';
+export const CONTENT_TYPE = {
+  FORM_DATA: 'form-data',
+};

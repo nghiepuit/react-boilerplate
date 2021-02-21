@@ -1,21 +1,25 @@
-export default (timeout, ...args) => {
+export default (
+  request,
+  option,
+  timeout = process.env.APP_DEFAULT_API_TIMEOUT,
+) => {
   return new Promise(async (resolve, reject) => {
-    let timeoutTimer = setTimeout(() => {
-      clearTimeout(timeoutTimer);
-      reject({
-        name: 'API_CALL_ERROR',
-        status: 499,
-        entryPoint: args[0],
-        option: args[1],
-        message: 'Network timeout',
-      });
-    }, timeout || process.env.APP_DEFAULT_API_TIMEOUT);
+    const timeoutTimer = !!timeout
+      ? setTimeout(() => {
+          timeoutTimer && clearTimeout(timeoutTimer);
+          reject({
+            name: 'API_CALL_ERROR',
+            status: 499,
+            entryPoint: request.toString(),
+            option: option,
+            message: 'Network timeout',
+          });
+        }, timeout)
+      : null;
     try {
-      const fetchResult = await fetch(...args);
-      if (timeoutTimer) {
-        clearTimeout(timeoutTimer);
-        resolve(fetchResult);
-      }
+      const fetchResult = await fetch(request, option);
+      timeoutTimer && clearTimeout(timeoutTimer);
+      resolve(fetchResult);
     } catch (ex) {
       reject(ex);
     }

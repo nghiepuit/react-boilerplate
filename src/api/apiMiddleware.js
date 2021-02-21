@@ -134,8 +134,8 @@ export default (store) => (next) => (action) => {
 
     return fetchWithTimeout(apiCallConfig.timeout, apiEntryPoint, fetchOptions)
       .then(async (apiResponse) => {
-        //FIXME: hard code to reload window when logout
-        //Fetch: manual redirect
+        // TODO: hard code to reload window when logout
+        // Fetch: manual redirect
         const normalizedApiResponse = await responseNormalizer(apiResponse);
 
         if (

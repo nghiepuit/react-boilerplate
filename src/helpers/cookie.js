@@ -1,12 +1,8 @@
-/**
- * @module helpers/cookie
- */
-
 import Cookies from 'js-cookie';
 import { MAX_COOKIE_EXPIRED } from './../helpers/const';
 import getBaseDomain from './../helpers/url/getBaseDomain';
 
-export const get = name => {
+export const get = (name) => {
   return Cookies.get(name);
 };
 
